@@ -29,3 +29,13 @@ E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\obj\Debug\net6.0\refint\G
 E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\obj\Debug\net6.0\GeekShop.Web.pdb
 E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\obj\Debug\net6.0\GeekShop.Web.genruntimeconfig.cache
 E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\obj\Debug\net6.0\ref\GeekShop.Web.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\Estudos\DotNet\Microsservicos\GeekShop\GeekShop.Web\obj\Debug\net6.0\GeekShop.Web.csproj.CopyComplete

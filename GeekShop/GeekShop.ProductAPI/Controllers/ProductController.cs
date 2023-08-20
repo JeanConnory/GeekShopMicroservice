@@ -2,7 +2,6 @@
 using GeekShop.ProductAPI.Repository;
 using GeekShop.ProductAPI.Utils;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeekShop.ProductAPI.Controllers
@@ -18,7 +17,6 @@ namespace GeekShop.ProductAPI.Controllers
 			_repository = repository ?? throw new ArgumentNullException(nameof(repository));
 		}
 
-        [Authorize]
         [HttpGet]
 		public async Task<ActionResult<IEnumerable<ProductVO>>> FindAll()
 		{

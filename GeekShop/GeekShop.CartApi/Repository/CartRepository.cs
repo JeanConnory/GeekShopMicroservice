@@ -97,10 +97,10 @@ namespace GeekShop.CartApi.Repository
 
             if(cartHeader == null)
             {
-                _context.CartHeaders.Add(cartHeader);
+                _context.CartHeaders.Add(cart.CartHeader);
                 await _context.SaveChangesAsync();
 
-                cart.CartDetails.FirstOrDefault().CartHeaderId = cartHeader.Id;
+                cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.Id;
                 cart.CartDetails.FirstOrDefault().Product = null;
                 _context.CartDetails.Add(cart.CartDetails.FirstOrDefault());
                 await _context.SaveChangesAsync();

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShop.ProductAPI", "Geek
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShop.IdentityServer", "GeekShop.IdentityServer\GeekShop.IdentityServer.csproj", "{6D41580B-8933-40FE-B536-866E369F03CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShop.CartApi", "GeekShop.CartApi\GeekShop.CartApi.csproj", "{20E3BB3E-A5DA-4E9F-ACAE-C213A9CCB831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShop.CartApi", "GeekShop.CartApi\GeekShop.CartApi.csproj", "{20E3BB3E-A5DA-4E9F-ACAE-C213A9CCB831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShop.CouponAPI", "GeekShop.CouponAPI\GeekShop.CouponAPI.csproj", "{0F169C2D-E5EE-468B-AB40-B31B0BA20989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{20E3BB3E-A5DA-4E9F-ACAE-C213A9CCB831}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E3BB3E-A5DA-4E9F-ACAE-C213A9CCB831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E3BB3E-A5DA-4E9F-ACAE-C213A9CCB831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F169C2D-E5EE-468B-AB40-B31B0BA20989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F169C2D-E5EE-468B-AB40-B31B0BA20989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F169C2D-E5EE-468B-AB40-B31B0BA20989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F169C2D-E5EE-468B-AB40-B31B0BA20989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{43468DF0-6C34-455F-86CA-DD2547692073} = {58626D18-DCFA-4E7A-AF21-3B9AFD8B6A4E}
 		{6D41580B-8933-40FE-B536-866E369F03CE} = {58626D18-DCFA-4E7A-AF21-3B9AFD8B6A4E}
 		{20E3BB3E-A5DA-4E9F-ACAE-C213A9CCB831} = {58626D18-DCFA-4E7A-AF21-3B9AFD8B6A4E}
+		{0F169C2D-E5EE-468B-AB40-B31B0BA20989} = {58626D18-DCFA-4E7A-AF21-3B9AFD8B6A4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7AE61DB5-F03D-4E92-9316-B7126818F400}

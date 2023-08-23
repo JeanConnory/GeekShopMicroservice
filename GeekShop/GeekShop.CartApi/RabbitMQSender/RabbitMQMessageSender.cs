@@ -43,7 +43,7 @@ namespace GeekShop.CartApi.RabbitMQSender
             {
                 WriteIndented = true
             };
-            var json = JsonSerializer.Serialize<CheckoutHeaderVO>((CheckoutHeaderVO)message, options);
+            var json = JsonSerializer.Serialize((CheckoutHeaderVO)message, options);
             var body = Encoding.UTF8.GetBytes(json);
             return body;
         }

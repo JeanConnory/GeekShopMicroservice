@@ -1,4 +1,5 @@
 using AutoMapper;
+using GeekShop.CartApi.RabbitMQSender;
 using GeekShop.CartApi.Repository;
 using GeekShop.CartAPI.Config;
 using GeekShop.CartAPI.Model.Context;
@@ -21,6 +22,7 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
 builder.Services.AddControllers();
 

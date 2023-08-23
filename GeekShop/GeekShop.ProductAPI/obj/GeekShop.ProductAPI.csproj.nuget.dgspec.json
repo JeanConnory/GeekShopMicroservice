@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Estudos\\DotNet\\Microsservicos\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj": {}
+    "E:\\Estudos\\DotNet\\Microsservicos\\GeekShopMicroservice\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj": {}
   },
   "projects": {
-    "E:\\Estudos\\DotNet\\Microsservicos\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj": {
+    "E:\\Estudos\\DotNet\\Microsservicos\\GeekShopMicroservice\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Estudos\\DotNet\\Microsservicos\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj",
+        "projectUniqueName": "E:\\Estudos\\DotNet\\Microsservicos\\GeekShopMicroservice\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj",
         "projectName": "GeekShop.ProductAPI",
-        "projectPath": "E:\\Estudos\\DotNet\\Microsservicos\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj",
+        "projectPath": "E:\\Estudos\\DotNet\\Microsservicos\\GeekShopMicroservice\\GeekShop\\GeekShop.ProductAPI\\GeekShop.ProductAPI.csproj",
         "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
-        "outputPath": "E:\\Estudos\\DotNet\\Microsservicos\\GeekShop\\GeekShop.ProductAPI\\obj\\",
+        "outputPath": "E:\\Estudos\\DotNet\\Microsservicos\\GeekShopMicroservice\\GeekShop\\GeekShop.ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -19,7 +19,30 @@ namespace GeekShop.CartApi.Repository
 
         public async Task<bool> ApplyCoupon(string userId, string couponCode)
         {
-            throw new NotImplementedException();
+            var header = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
+
+            if (header != null)
+            {
+                header.CouponCode = couponCode;
+                _context.CartHeaders.Update(header);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> RemoveCoupon(string userId)
+        {
+            var header = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
+
+            if (header != null)
+            {
+                header.CouponCode = string.Empty;
+                _context.CartHeaders.Update(header);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
 
         public async Task<bool> ClearCart(string userId)
@@ -48,12 +71,7 @@ namespace GeekShop.CartApi.Repository
                                 .Include(c => c.Product);
 
             return _mapper.Map<CartVO>(cart);
-        }
-
-        public async Task<bool> RemoveCoupon(string userId)
-        {
-            throw new NotImplementedException();
-        }
+        }        
 
         public async Task<bool> RemoveFromCart(long cartDetailsId)
         {

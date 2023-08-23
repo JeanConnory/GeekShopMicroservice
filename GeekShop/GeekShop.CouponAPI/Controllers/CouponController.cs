@@ -1,5 +1,6 @@
 ﻿using GeekShop.CouponAPI.Data.ValueObjects;
 using GeekShop.CouponAPI.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeekShop.CouponAPI.Controllers
@@ -15,6 +16,7 @@ namespace GeekShop.CouponAPI.Controllers
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
+        [Authorize]
         [HttpGet("{couponCode}")]
         public async Task<ActionResult<CouponVO>> GetCouponByCouponCode(string couponCode)
         {

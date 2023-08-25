@@ -1,31 +1,16 @@
+using GeekShop.PaymentAPI.MessageConsumer;
+using GeekShop.PaymentAPI.RabbitMQSender;
+using GeekShop.PaymentProcessor;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using GeekShop.OrderAPI.Model.Context;
-using Microsoft.EntityFrameworkCore;
-using GeekShop.OrderAPI.Repository;
-using GeekShop.OrderAPI.MessageConsumer;
-using GeekShop.OrderAPI.RabbitMQSender;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
+// Add services to the container.
 
-builder.Services.AddDbContext<MySQLContext>(options => options.
-        UseMySql(connection,
-        ServerVersion.AutoDetect(connection)));
-
-
-var dbContextBuilder = new DbContextOptionsBuilder<MySQLContext>();
-dbContextBuilder.UseMySql(connection,
-        ServerVersion.AutoDetect(connection));
-builder.Services.AddSingleton(new OrderRepository(dbContextBuilder.Options));
-
-builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
-builder.Services.AddHostedService<RabbitMQPaymentConsumer>();
-
+builder.Services.AddSingleton<IProcessPayment, ProcessPayment>();
 builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
-
-builder.Services.AddControllers();
+builder.Services.AddHostedService<RabbitMQPaymentConsumer>();
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
@@ -50,7 +35,7 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.OrderAPI", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.PaymentAPI", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = @"Enter 'Bearer' [space] and your token!",
@@ -76,8 +61,6 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
